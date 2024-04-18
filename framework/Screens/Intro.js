@@ -13,7 +13,7 @@ export function Intro({ navigation }) {
           <View></View>
           <Text style={{ textAlign: "center", color: "white", fontSize: 40, fontWeight: "bold", }}>X-Note</Text>
           <View style={{ gap: 10, marginBottom: 30 }}>
-            <AppBotton touchable={9}>Get started</AppBotton>
+            <AppBotton onPress={() => navigation.navigate("SignUp")}>Get started</AppBotton>
             <AppBotton onPress={() => navigation.navigate("Login")} style={styles.btn}>Login</AppBotton>
           </View>
         </View>

@@ -9,6 +9,7 @@ import { Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
 import Carousel from 'react-native-reanimated-carousel'
 import { Button, Card } from 'react-native-paper'
 import { SendNote } from './SendNote'
+import { Settings } from './Settings'
 
 const carouselLinks = [
     require("../../assets/c2.jpg"),
@@ -96,7 +97,7 @@ export function HomePage() {
                     }
                     else if (route.name === 'Profile') {
                         size = focused ? 35 : 23
-                        iconName = focused ? 'account' : 'account-outline';
+                        iconName = focused ? 'cog' : 'setting';
                     }
                     else if (route.name === 'PostNote') {
                         size = focused ? 35 : 23
@@ -118,7 +119,8 @@ export function HomePage() {
             <Tab.Screen name="HomeScreen" component={HomeScreen} />
             <Tab.Screen name="PostNote" component={PostNote} />
             <Tab.Screen name="SendNote" component={SendNote} />
-            <Tab.Screen name="Profile" component={Profile} />
+            <Tab.Screen name="Settings" component={Settings} />
+            {/* <Tab.Screen name="Profile" component={Profile} /> */}
         </Tab.Navigator>
     );
 }
